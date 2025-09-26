@@ -4,8 +4,8 @@
 .page {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
-    background-color: #fff;
     font-size: 1rem;
+    background-color: #10100F;
 }
 
 .header__container {
@@ -18,7 +18,8 @@
 }
 
 .header__title {
-
+    margin-top: 2rem;
+color: #D6DFE8;
 }
 
 .header__description {
@@ -40,13 +41,73 @@
 
 .content__title {
     text-align: center;
-    background-color: plum;
+    font-size: 1.8rem;
+    color: #D6DFE8;
 }
 
+.content__result {
+    color: #88C2CE;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 15rem;
+    height: 2rem;
+}
+
+
+
 form {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    row-gap: 1.5rem;
+
+    &:has(.input:not(:placeholder-shown)) .field__label {
+        color: #626461;
+        scale: 0.72;
+        translate: -4em -1.75em;
+    }
+}
+
+/*.field__label {
+    position: absolute;
+    color: #D6DFE8;
+    top: 3%;
+    z-index: -1;
+}*/
+
+.input {
+    background-color: #fff;
+    text-align: center;
+    width: 17rem;
+    height: 1.8rem;
+    outline: 1px solid #F4F9FC;
+    padding-inline: 16px;
+
+
+        &:hover,
+        &:focus {
+            border-color: #fff;
+            background-color: #fff;
+        }
+
+        &:focus {
+            background-color: #fff;
+            outline: #fff;
+        }
+}
+
+
+
+.button {
+    background-color: #F4F9FC;
+    border-radius: 0.6rem;
+    width: 7rem;
+    height: 1.8rem;
+}
+
+.content__answers {
+    font-size: 1rem;
+    color: #626461;
 }
