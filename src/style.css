@@ -39,7 +39,7 @@ color: #D6DFE8;
     height: 2.5rem;
     border-radius: 50%;
     align-items: start;
-    background-image: url("public/image/button/restart.svg");
+    background-image: url("public/restart.svg");
     background-size: 100%;
     background-position: center;
 
