@@ -4,5 +4,4 @@ export default defineConfig({
     server: {
         open: true,
     },
-    base: '/guess-the-number/',
 });
