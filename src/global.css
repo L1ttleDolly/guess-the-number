@@ -42,9 +42,9 @@ img {
 
 input,
 label,
-button {
+button
+{
     font: inherit;
-    transition-duration: 0.2s;
     padding: 0;
     margin: 0;
     border: none;

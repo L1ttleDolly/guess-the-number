@@ -34,13 +34,24 @@ color: #D6DFE8;
 }
 
 .button-restart {
+    transition-duration: 0.2s;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     align-items: start;
-    background-image: url("image/button/restart.svg");
+    background-image: url("public/image/button/restart.svg");
     background-size: 100%;
     background-position: center;
+
+    &:hover {
+        transition-duration: 0.2s;
+        background-color: #88C2CE;
+    }
+
+    &:active {
+        transform: scale(0.90);
+        transition: transform 0.2s ease;
+    }
 }
 
 .content__container {
@@ -72,40 +83,22 @@ form {
     justify-content: center;
     align-items: center;
     row-gap: 1.5rem;
-
-    &:has(.input:not(:placeholder-shown)) .field__label {
-        color: #626461;
-        scale: 0.72;
-        translate: -4em -1.75em;
-    }
 }
-
-/*.field__label {
-    position: absolute;
-    color: #D6DFE8;
-    top: 3%;
-    z-index: -1;
-}*/
 
 .input {
     background-color: #fff;
     text-align: center;
     width: 17rem;
     height: 1.8rem;
-    outline: 1px solid #F4F9FC;
     padding-inline: 16px;
-
 
         &:hover,
         &:focus {
-            border-color: #fff;
-            background-color: #fff;
+            transition-duration: 0.1s;
+            outline: 2px dashed #fff;
+            background-color: #a5e1ec;
         }
 
-        &:focus {
-            background-color: #fff;
-            outline: #fff;
-        }
 }
 
 .button {
@@ -113,9 +106,20 @@ form {
     border-radius: 0.6rem;
     width: 7rem;
     height: 1.8rem;
+    transition-duration: 0.2s;
 
     &:disabled {
         background-color: #acacac;
+    }
+
+    &:hover {
+        transition-duration: 0.2s;
+        background-color: #88C2CE;
+    }
+
+    &:active {
+        transform: scale(0.90);
+        transition: transform 0.2s ease;
     }
 }
 
