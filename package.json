@@ -6,6 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "deploy": "vite build && gh-pages -d dist",
+    "build:docs": "vite build && rm -rf docs && mv dist docs",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -19,6 +21,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.6.2",
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",
