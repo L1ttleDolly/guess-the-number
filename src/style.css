@@ -108,18 +108,23 @@ form {
     height: 1.8rem;
     transition-duration: 0.2s;
 
-    &:disabled {
-        background-color: #acacac;
+    &:active {
+        transform: scale(0.90);
+        transition: transform 0.2s ease;
     }
 
     &:hover {
         transition-duration: 0.2s;
         background-color: #88C2CE;
     }
+}
 
-    &:active {
-        transform: scale(0.90);
-        transition: transform 0.2s ease;
+.disabled {
+
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: #acacac;
     }
 }
 

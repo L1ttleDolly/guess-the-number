@@ -47,9 +47,11 @@ function isShowResult () {
 function isValidButton(boolean) {
     const button = $('.button')
     if(button){
+        button.classList.add('disabled')
         button.disabled = boolean
     } else {
         button.disabled = boolean
+        button.classList.remove('disabled')
     }
 }
 
