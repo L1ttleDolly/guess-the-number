@@ -28,6 +28,7 @@ function isShowResult () {
 
     if (randomInt === inputValue) {
         resultContainer.textContent = 'Вы выиграли'
+        answers.textContent = 'Число меньше загаданного'
     }
     else if (attempts === maxAttempts)  {
         resultContainer.textContent = 'Вы проиграли'
