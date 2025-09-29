@@ -27,8 +27,20 @@ color: #D6DFE8;
 }
 
 .content {
- width: 100%;
+    width: 100%;
     height: 40vh;
+    display: flex;
+    justify-content: center;
+}
+
+.button-restart {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    align-items: start;
+    background-image: url("image/button/restart.svg");
+    background-size: 100%;
+    background-position: center;
 }
 
 .content__container {
@@ -50,10 +62,8 @@ color: #D6DFE8;
     font-size: 1.3rem;
     text-align: center;
     width: 15rem;
-    height: 2rem;
+    height: 1.5rem;
 }
-
-
 
 form {
     position: relative;
@@ -98,16 +108,21 @@ form {
         }
 }
 
-
-
 .button {
     background-color: #F4F9FC;
     border-radius: 0.6rem;
     width: 7rem;
     height: 1.8rem;
+
+    &:disabled {
+        background-color: #acacac;
+    }
 }
 
 .content__answers {
     font-size: 1rem;
     color: #626461;
+    text-align: center;
+    width: 15rem;
+    height: 1.5rem;
 }
