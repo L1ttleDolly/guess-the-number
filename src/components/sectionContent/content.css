@@ -1,36 +1,161 @@
 .content {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  position: relative;
 }
 
 .content__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .content__title {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #D6DFE8;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  background: linear-gradient(
+    135deg,
+    var(--color-text-primary),
+    var(--color-text-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .content__result {
-    color: #88C2CE;
-    font-size: 1.3rem;
-    text-align: center;
-    width: 15rem;
-    height: 1.5rem;
+  color: var(--color-primary-light);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  text-align: center;
+  min-height: 2rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-lg);
+  background: rgba(99, 102, 241, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+.content__result.win {
+  color: var(--color-success);
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--color-success);
+  animation: victoryPulse 0.6s ease-out;
+}
+
+.content__result.lose {
+  color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.2);
+  border-color: var(--color-danger);
+  animation: shake 0.5s ease-out;
 }
 
 .content__answers {
-    font-size: 1rem;
-    color: #626461;
-    text-align: center;
-    width: 15rem;
-    height: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  text-align: center;
+  min-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.6s ease-out 0.3s backwards;
+}
+
+.content__attempts {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.attempt-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-base);
+  animation: dotFadeIn 0.3s ease-out backwards;
+}
+
+.attempt-dot.used {
+  background: linear-gradient(
+    135deg,
+    var(--color-danger),
+    var(--color-warning)
+  );
+  border-color: var(--color-danger);
+  box-shadow: 0 0 10px var(--color-danger);
+  transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes victoryPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes dotFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
