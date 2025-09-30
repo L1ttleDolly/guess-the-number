@@ -1,15 +1,18 @@
 import './style.css';
 
 const $ = document.querySelector.bind(document);
+
 const form = $('form[name="form"]');
 const input = $('.input')
-const restartButton = $('.button-restart')
 
+const restartButton = $('.button-interactive')
 const resultContainer = $('.content__result')
 const answers = $('.content__answers')
 
 let randomInt
+
 let attempts = 0
+
 const maxAttempts = 5
 
 const getRandomInt = () => {
@@ -38,15 +41,15 @@ function isShowResult () {
     else if (randomInt > inputValue) {
         resultContainer.textContent = 'Игра продолжается'
         answers.textContent = 'Число меньше загаданного'
-
-    } else if (randomInt < inputValue) {
+    }
+    else if (randomInt < inputValue) {
         resultContainer.textContent = 'Игра продолжается'
         answers.textContent = 'Число больше загаданного'
     }
 }
 
 function isValidButton(boolean) {
-    const button = $('.button')
+    const button = $('.button-submit')
     if(button){
         button.classList.add('disabled')
         button.disabled = boolean

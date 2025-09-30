@@ -1,0 +1,14 @@
+.input {
+    background-color: #fff;
+    text-align: center;
+    width: 17rem;
+    height: 1.8rem;
+    padding-inline: 16px;
+
+    &:hover,
+    &:focus {
+        transition-duration: 0.1s;
+        outline: 2px dashed #fff;
+        background-color: #a5e1ec;
+    }
+}

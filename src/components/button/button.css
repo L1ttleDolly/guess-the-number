@@ -1,0 +1,39 @@
+.button {
+    background-color: #F4F9FC;
+    transition-duration: 0.2s;
+
+    &:active {
+        transform: scale(0.90);
+        transition: transform 0.2s ease;
+    }
+
+    &:hover {
+        transition-duration: 0.2s;
+        background-color: #88C2CE;
+    }
+}
+
+.button-submit {
+    border-radius: 0.6rem;
+    width: 7rem;
+    height: 1.8rem;
+}
+
+.disabled {
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: #acacac;
+    }
+}
+
+.button-interactive{
+    transition-duration: 0.2s;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    align-items: start;
+    background-image: url("C:\Users\veeta\dev\gTn\public\restart.svg");
+    background-size: 100%;
+    background-position: center;
+}

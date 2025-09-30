@@ -1,136 +1,14 @@
 @import "global.css";
 @import "normalize.css";
+@import "components/button/button.css";
+@import "components/form/form.css";
+@import "components/form/input.css";
+@import "components/header/header.css";
+@import "components/sectionContent/content.css";
 
 .page {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     background-color: #10100F;
-}
-
-.header__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 20vh;
-    margin-bottom: 10rem;
-}
-
-.header__title {
-    margin-top: 2rem;
-color: #D6DFE8;
-}
-
-.header__description {
-
-}
-
-.content {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-}
-
-.button-restart {
-    transition-duration: 0.2s;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    align-items: start;
-    background-image: url("public/restart.svg");
-    background-size: 100%;
-    background-position: center;
-
-    &:hover {
-        transition-duration: 0.2s;
-        background-color: #88C2CE;
-    }
-
-    &:active {
-        transform: scale(0.90);
-        transition: transform 0.2s ease;
-    }
-}
-
-.content__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.content__title {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #D6DFE8;
-}
-
-.content__result {
-    color: #88C2CE;
-    font-size: 1.3rem;
-    text-align: center;
-    width: 15rem;
-    height: 1.5rem;
-}
-
-form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1.5rem;
-}
-
-.input {
-    background-color: #fff;
-    text-align: center;
-    width: 17rem;
-    height: 1.8rem;
-    padding-inline: 16px;
-
-        &:hover,
-        &:focus {
-            transition-duration: 0.1s;
-            outline: 2px dashed #fff;
-            background-color: #a5e1ec;
-        }
-
-}
-
-.button {
-    background-color: #F4F9FC;
-    border-radius: 0.6rem;
-    width: 7rem;
-    height: 1.8rem;
-    transition-duration: 0.2s;
-
-    &:active {
-        transform: scale(0.90);
-        transition: transform 0.2s ease;
-    }
-
-    &:hover {
-        transition-duration: 0.2s;
-        background-color: #88C2CE;
-    }
-}
-
-.disabled {
-    &:disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-        background-color: #acacac;
-    }
-}
-
-.content__answers {
-    font-size: 1rem;
-    color: #626461;
-    text-align: center;
-    width: 15rem;
-    height: 1.5rem;
 }
