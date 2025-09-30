@@ -8,6 +8,9 @@ const input = $('.input')
 const restartButton = $('.button-interactive')
 const resultContainer = $('.content__result')
 const answers = $('.content__answers')
+const modal = $('.modal')
+const buttonModalOpen = $('.button-info')
+const buttonModalClose = $('.modal__button-close')
 
 let randomInt
 
@@ -68,6 +71,15 @@ function restartGame() {
     startNewGame()
 }
 
+function openModal() {
+    modal.showModal()
+    modal.classList.toggle('modal-isOpen')
+}
+function closeModal() {
+    modal.close()
+    modal.classList.toggle('modal-isOpen')
+}
+
 restartButton.addEventListener('click', () => {
     restartGame()
 })
@@ -77,3 +89,10 @@ form.addEventListener('submit', (e) => {
     isShowResult()
 })
 
+buttonModalOpen.addEventListener('click', () => {
+    openModal()
+})
+
+buttonModalClose.addEventListener('click', () => {
+    closeModal()
+})

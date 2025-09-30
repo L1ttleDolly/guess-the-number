@@ -33,7 +33,7 @@
     height: 2.5rem;
     border-radius: 50%;
     align-items: start;
-    background-image: url("C:\Users\veeta\dev\gTn\public\restart.svg");
+    background-image: url("/restart.svg");
     background-size: 100%;
     background-position: center;
 }
@@ -41,11 +41,11 @@
 .button-info {
     align-self: center;
     transition-duration: 0.2s;
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border-radius: 50%;
     align-items: start;
-    background-image: url("/restart.svg");
-    background-size: 100%;
+    background-image: url("/more-info-icon.svg");
+    background-size: cover;
     background-position: center;
 }

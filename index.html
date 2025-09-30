@@ -8,6 +8,21 @@
     <script type="module" src="./src/main.js" defer></script>
   </head>
   <body class="page">
+  <dialog
+
+          aria-label="Правила игры"
+          class="modal"
+  >
+    <h2>Правила игры</h2>
+    <ul>
+      <li>1. Загадывается число от 1 до 100</li>
+      <li>2. У вас есть 5 попыток, чтобы его угадать</li>
+      <li>3. После каждой попытки будет подсказка: число больше или меньше</li>
+      <li>4. Если не угадали за 5 попыток — игра заканчивается</li>
+      <li>5. Можно начать заново и попробовать ещё раз</li>
+    </ul>
+    <button class="button modal__button-close">Понятно</button>
+  </dialog>
     <header class="header__container">
       <h1 class="header__title">Угадай число</h1>
       <p class="header__description"></p>

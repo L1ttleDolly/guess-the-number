@@ -5,7 +5,7 @@
 @import "components/form/input.css";
 @import "components/header/header.css";
 @import "components/sectionContent/content.css";
-
+@import "components/modal/modal.css";
 .page {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
