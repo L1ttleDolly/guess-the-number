@@ -8,7 +8,7 @@
 }
 
 .header__title {
-    margin-top: 2rem;
+    align-self: center;
     color: #D6DFE8;
 }
 

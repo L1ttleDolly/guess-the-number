@@ -37,3 +37,15 @@
     background-size: 100%;
     background-position: center;
 }
+
+.button-info {
+    align-self: center;
+    transition-duration: 0.2s;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    align-items: start;
+    background-image: url("/restart.svg");
+    background-size: 100%;
+    background-position: center;
+}
