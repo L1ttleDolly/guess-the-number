@@ -1,55 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game App</title>
+    <title>Угадай число - Игра</title>
+    <meta
+      name="description"
+      content="Увлекательная игра: угадайте число от 1 до 100 за 5 попыток!"
+    />
     <script type="module" src="./src/main.js" defer></script>
   </head>
   <body class="page">
-  <dialog
-
-          aria-label="Правила игры"
-          class="modal"
-  >
-    <h2>Правила игры</h2>
-    <ul>
-      <li>1. Загадывается число от 1 до 100</li>
-      <li>2. У вас есть 5 попыток, чтобы его угадать</li>
-      <li>3. После каждой попытки будет подсказка: число больше или меньше</li>
-      <li>4. Если не угадали за 5 попыток — игра заканчивается</li>
-      <li>5. Можно начать заново и попробовать ещё раз</li>
-    </ul>
-    <button class="button modal__button-close">Понятно</button>
-  </dialog>
+    <dialog aria-label="Правила игры" class="modal">
+      <h2>📖 Правила игры</h2>
+      <ul>
+        <li>1. Загадывается число от 1 до 100</li>
+        <li>2. У вас есть 5 попыток, чтобы его угадать</li>
+        <li>
+          3. После каждой попытки будет подсказка: число больше или меньше
+        </li>
+        <li>4. Если не угадали за 5 попыток — игра заканчивается</li>
+        <li>5. Можно начать заново и попробовать ещё раз</li>
+      </ul>
+      <button
+        class="button modal__button-close"
+        aria-label="Закрыть модальное окно"
+      >
+        Понятно
+      </button>
+    </dialog>
     <header class="header__container">
       <h1 class="header__title">Угадай число</h1>
-      <p class="header__description"></p>
-      <button class="button button-info"></button>
+      <button
+        class="button button-info"
+        aria-label="Открыть правила игры"
+      ></button>
     </header>
     <main>
       <section class="content">
         <div class="content__container">
           <h2 class="content__title">Результат:</h2>
-          <p class="content__result"></p>
-            <form name="form">
-              <label
-                      class="field__label"
-                      for="field"
-              >
-              </label>
-              <input
-                      id="field"
-                      type="number"
-                      class="input"
-                      placeholder="Введите число от 0 до 100"
-              />
-              <button class="button button-submit" type="submit">Отправить</button>
-            </form>
-          <p class="content__answers"></p>
+          <p class="content__result" role="status" aria-live="polite"></p>
+          <form name="form" aria-label="Форма ввода числа">
+            <label class="field__label visually-hidden" for="field">
+              Введите ваше предположение
+            </label>
+            <input
+              id="field"
+              type="number"
+              class="input"
+              placeholder="Введите число от 1 до 100"
+              min="1"
+              max="100"
+              required
+              aria-required="true"
+              aria-describedby="hint"
+            />
+            <button class="button button-submit" type="submit">
+              Отправить
+            </button>
+          </form>
+          <p
+            class="content__answers"
+            id="hint"
+            role="status"
+            aria-live="polite"
+          ></p>
         </div>
-        <button type="submit" class="button button-interactive"></button>
+        <button
+          type="button"
+          class="button button-interactive"
+          aria-label="Начать новую игру"
+        ></button>
       </section>
     </main>
   </body>
