@@ -9,6 +9,10 @@ dialog {
     }
 }
 
+.modal-isHidden {
+    display: none;
+}
+
 .modal-isOpen{
     display: flex;
     flex-direction: column;

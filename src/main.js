@@ -34,7 +34,7 @@ function isShowResult () {
 
     if (randomInt === inputValue) {
         resultContainer.textContent = 'Вы выиграли'
-        answers.textContent = 'Число меньше загаданного'
+        answers.textContent = ''
     }
     else if (attempts === maxAttempts)  {
         resultContainer.textContent = 'Вы проиграли'
@@ -73,11 +73,12 @@ function restartGame() {
 
 function openModal() {
     modal.showModal()
-    modal.classList.toggle('modal-isOpen')
+    modal.classList.add('modal-isOpen')
 }
 function closeModal() {
     modal.close()
-    modal.classList.toggle('modal-isOpen')
+    modal.classList.remove('modal-isOpen')
+    modal.classList.add('modal-isHidden')
 }
 
 restartButton.addEventListener('click', () => {
