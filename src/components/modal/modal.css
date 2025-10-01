@@ -1,6 +1,7 @@
 dialog {
     width: 21rem;
     height: 21rem;
+    border-radius: 10%;
     background-color: #88C2CE;
     overflow: hidden;
     z-index: 100;
