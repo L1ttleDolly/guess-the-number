@@ -1,4 +1,5 @@
 import './style.css';
+import { openModal, closeModal } from "./scripts components/modal.js";
 
 const $ = document.querySelector.bind(document);
 
@@ -71,16 +72,6 @@ function restartGame() {
     startNewGame()
 }
 
-function openModal() {
-    modal.showModal()
-    modal.classList.add('modal-isOpen')
-}
-function closeModal() {
-    modal.close()
-    modal.classList.remove('modal-isOpen')
-    modal.classList.add('modal-isHidden')
-}
-
 restartButton.addEventListener('click', () => {
     restartGame()
 })
@@ -91,9 +82,10 @@ form.addEventListener('submit', (e) => {
 })
 
 buttonModalOpen.addEventListener('click', () => {
-    openModal()
+    openModal(modal)
 })
 
 buttonModalClose.addEventListener('click', () => {
-    closeModal()
+    closeModal(modal)
 })
+
