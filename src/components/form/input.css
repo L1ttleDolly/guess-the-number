@@ -7,8 +7,8 @@
 
     &:hover,
     &:focus {
-        transition-duration: 0.1s;
         outline: 2px dashed #fff;
         background-color: #a5e1ec;
+        transition: outline, background-color 0.5s ease;
     }
 }

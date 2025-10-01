@@ -8,7 +8,6 @@
     }
 
     &:hover {
-        transition-duration: 0.2s;
         background-color: #88C2CE;
     }
 }
@@ -39,13 +38,21 @@
 }
 
 .button-info {
+    background-color: transparent;
+    color: #88C2CE;
+    outline: 1px solid #F4F9FC;
     align-self: center;
     transition-duration: 0.2s;
-    width: 1.8rem;
+    width: 9rem;
     height: 1.8rem;
-    border-radius: 50%;
+    border-radius: 0.6rem;
     align-items: start;
-    background-image: url("/more-info-icon.svg");
-    background-size: cover;
-    background-position: center;
+
+    &:hover {
+        color: #F4F9FC;
+        background-color: #88C2CE;
+        outline: none;
+        transition: color, background-color 0.7s ease;
+    }
+
 }
