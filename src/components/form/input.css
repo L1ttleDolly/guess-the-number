@@ -1,9 +1,10 @@
 .input {
   background-color: #fff;
+  border-radius: 2rem;
   text-align: center;
   width: 17rem;
   height: 1.8rem;
-  padding-inline: 16px;
+
 
   &:hover,
   &:focus {
