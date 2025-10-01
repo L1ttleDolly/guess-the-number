@@ -6,8 +6,9 @@
 @import "components/header/header.css";
 @import "components/sectionContent/content.css";
 @import "components/modal/modal.css";
+@import "components/footer/footer.css";
+
 .page {
-  min-height: 100vh;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   background-color: #10100f;
