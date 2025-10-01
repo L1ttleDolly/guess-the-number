@@ -1,91 +1,87 @@
-import './style.css';
+import "./style.css";
 import { openModal, closeModal } from "./scripts components/modal.js";
 
 const $ = document.querySelector.bind(document);
 
 const form = $('form[name="form"]');
-const input = $('.input')
+const input = $(".input");
 
-const restartButton = $('.button-interactive')
-const resultContainer = $('.content__result')
-const answers = $('.content__answers')
-const modal = $('.modal')
-const buttonModalOpen = $('.button-info')
-const buttonModalClose = $('.modal__button-close')
+const restartButton = $(".button-interactive");
+const resultContainer = $(".content__result");
+const answers = $(".content__answers");
+const modal = $(".modal");
+const buttonModalOpen = $(".button-info");
+const buttonModalClose = $(".modal__button-close");
 
-let randomInt
+let randomInt;
 
-let attempts = 0
+let attempts = 0;
 
-const maxAttempts = 5
+const maxAttempts = 5;
 
 const getRandomInt = () => {
-    return Math.floor(Math.random() * 100) + 1
-}
+  return Math.floor(Math.random() * 100) + 1;
+};
 
 function startNewGame() {
-    randomInt = getRandomInt()
+  randomInt = getRandomInt();
 }
 
-startNewGame()
+startNewGame();
 
-function isShowResult () {
-    attempts++
-    const inputValue = parseInt(input.value)
+function isShowResult() {
+  attempts++;
+  const inputValue = parseInt(input.value);
 
-    if (randomInt === inputValue) {
-        resultContainer.textContent = 'Вы выиграли'
-        answers.textContent = ''
-    }
-    else if (attempts === maxAttempts)  {
-        resultContainer.textContent = 'Вы проиграли'
-        answers.textContent = ''
-        isValidButton(true)
-    }
-    else if (randomInt > inputValue) {
-        resultContainer.textContent = 'Игра продолжается'
-        answers.textContent = 'Число меньше загаданного'
-    }
-    else if (randomInt < inputValue) {
-        resultContainer.textContent = 'Игра продолжается'
-        answers.textContent = 'Число больше загаданного'
-    }
+  if (randomInt === inputValue) {
+    resultContainer.textContent = "Вы выиграли";
+    answers.textContent = "";
+  } else if (attempts === maxAttempts) {
+    resultContainer.textContent = "Вы проиграли";
+    answers.textContent = "";
+    isValidButton(true);
+  } else if (randomInt > inputValue) {
+    resultContainer.textContent = "Игра продолжается";
+    answers.textContent = "Число меньше загаданного";
+  } else if (randomInt < inputValue) {
+    resultContainer.textContent = "Игра продолжается";
+    answers.textContent = "Число больше загаданного";
+  }
 }
 
 function isValidButton(boolean) {
-    const button = $('.button-submit')
-    if(button){
-        button.classList.add('disabled')
-        button.disabled = boolean
-    } else {
-        button.disabled = boolean
-        button.classList.remove('disabled')
-    }
+  const button = $(".button-submit");
+  if (button) {
+    button.classList.add("disabled");
+    button.disabled = boolean;
+  } else {
+    button.disabled = boolean;
+    button.classList.remove("disabled");
+  }
 }
 
 function restartGame() {
-    form.reset()
-    isValidButton(false)
-    resultContainer.textContent = ''
-    answers.textContent = ''
-    attempts = 0
-    startNewGame()
+  form.reset();
+  isValidButton(false);
+  resultContainer.textContent = "";
+  answers.textContent = "";
+  attempts = 0;
+  startNewGame();
 }
 
-restartButton.addEventListener('click', () => {
-    restartGame()
-})
+restartButton.addEventListener("click", () => {
+  restartGame();
+});
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    isShowResult()
-})
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  isShowResult();
+});
 
-buttonModalOpen.addEventListener('click', () => {
-    openModal(modal)
-})
+buttonModalOpen.addEventListener("click", () => {
+  openModal(modal);
+});
 
-buttonModalClose.addEventListener('click', () => {
-    closeModal(modal)
-})
-
+buttonModalClose.addEventListener("click", () => {
+  closeModal(modal);
+});

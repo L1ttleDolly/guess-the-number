@@ -7,8 +7,8 @@
 @import "components/sectionContent/content.css";
 @import "components/modal/modal.css";
 .page {
-    min-height: 100vh;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    background-color: #10100F;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  background-color: #10100f;
 }

@@ -2,56 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon-16x16.png" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon-32x32.png">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game App</title>
     <script type="module" src="./src/main.js" defer></script>
   </head>
   <body class="page">
-  <dialog
-
-          aria-label="Правила игры"
-          class="modal"
-  >
-    <h2>Правила игры</h2>
-    <ul>
-      <li>1. Загадывается число от 1 до 100</li>
-      <li>2. У вас есть 5 попыток, чтобы его угадать</li>
-      <li>3. После каждой попытки будет подсказка: число больше или меньше</li>
-      <li>4. Если не угадали за 5 попыток — игра заканчивается</li>
-      <li>5. Можно начать заново и попробовать ещё раз</li>
-    </ul>
-    <button class="modal__button-close">Понятно</button>
-  </dialog>
+    <dialog aria-label="Правила игры" class="modal">
+      <h2>Правила игры</h2>
+      <ul>
+        <li>1. Загадывается число от 1 до 100</li>
+        <li>2. У вас есть 5 попыток, чтобы его угадать</li>
+        <li>
+          3. После каждой попытки будет подсказка: число больше или меньше
+        </li>
+        <li>4. Если не угадали за 5 попыток — игра заканчивается</li>
+        <li>5. Можно начать заново и попробовать ещё раз</li>
+      </ul>
+      <button class="modal__button-close">Понятно</button>
+    </dialog>
     <header class="header__container">
       <h1 class="header__title">Угадай число</h1>
-      <p class="header__description"></p>
       <button class="button-info">Правила игры</button>
     </header>
     <main>
       <section class="content">
-
-          <h2 class="content__title">Результат:</h2>
-          <p class="content__result"></p>
-            <form name="form">
-              <label
-                      class="field__label"
-                      for="field"
-              >
-              </label>
-              <input
-                      id="field"
-                      type="number"
-                      class="input"
-                      placeholder="Введите число от 0 до 100"
-              />
-              <button class="button button-submit" type="submit">Отправить</button>
-            </form>
-          <p class="content__answers"></p>
-
-        <button type="submit" class="button button-interactive"></button>
+        <h2 class="content__title">Результат:</h2>
+        <p class="content__result"></p>
+        <form name="form">
+          <label class="field__label" for="field"> </label>
+          <input
+            id="field"
+            type="number"
+            class="input"
+            placeholder="Введите число от 1 до 100"
+          />
+          <button class="button button-submit" type="submit">Отправить</button>
+        </form>
+        <p class="content__answers"></p>
+        <button
+          type="submit"
+          class="button button-interactive"
+          aria-label="Начать заново"
+        ></button>
       </section>
     </main>
   </body>

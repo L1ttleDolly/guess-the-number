@@ -1,58 +1,59 @@
 .button {
-    background-color: #F4F9FC;
-    transition-duration: 0.2s;
+  background-color: #f4f9fc;
+  transition-duration: 0.2s;
 
-    &:active {
-        transform: scale(0.90);
-        transition: transform 0.2s ease;
-    }
+  &:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+  }
 
-    &:hover {
-        background-color: #88C2CE;
-    }
+  &:hover {
+    background-color: #88c2ce;
+  }
 }
 
 .button-submit {
-    border-radius: 0.6rem;
-    width: 7rem;
-    height: 1.8rem;
+  border-radius: 0.6rem;
+  width: 7rem;
+  height: 1.8rem;
 }
 
 .disabled {
-    &:disabled {
-        cursor: not-allowed;
-        pointer-events: none;
-        background-color: #acacac;
-    }
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #acacac;
+  }
 }
 
-.button-interactive{
-    transition-duration: 0.2s;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    align-items: start;
-    background-image: url("/restart.svg");
-    background-size: 100%;
-    background-position: center;
+.button-interactive {
+  transition-duration: 0.2s;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  align-items: start;
+  background-image: url("/restart.svg");
+  background-size: 100%;
+  background-position: center;
 }
 
 .button-info {
-    background-color: transparent;
-    color: #88C2CE;
-    outline: 1px solid #F4F9FC;
-    align-self: center;
-    transition-duration: 0.2s;
-    width: 9rem;
-    height: 1.8rem;
-    border-radius: 0.6rem;
-    align-items: start;
+  background-color: transparent;
+  color: #88c2ce;
+  outline: 1px solid #f4f9fc;
+  align-self: center;
+  transition-duration: 0.2s;
+  width: 9rem;
+  height: 1.8rem;
+  border-radius: 0.6rem;
+  align-items: start;
 
-    &:hover {
-        color: #F4F9FC;
-        background-color: #88C2CE;
-        outline: none;
-        transition: color, background-color 0.7s ease;
-    }
-
+  &:hover {
+    color: #f4f9fc;
+    background-color: #88c2ce;
+    outline: none;
+    transition:
+      color,
+      background-color 0.7s ease;
+  }
 }

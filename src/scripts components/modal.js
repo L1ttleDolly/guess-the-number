@@ -1,12 +1,7 @@
-
-
-
 export function openModal(element) {
-    element.showModal()
+  element.showModal();
 }
 
 export function closeModal(element) {
-    element.close()
+  element.close();
 }
-
-
